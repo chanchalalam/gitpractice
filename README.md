@@ -34,10 +34,9 @@ git diff: See the exact changes you've made to files.
 
 git log: View the commit history .
 
-git checkout master: Check current branch and its status
+git checkout master: To Switch the branch
 
 touch CONTRIBUTING.md: Create the CONTRIBUTING.md file
-
 
 ## To tell Git to include these modifications in the next commit
 
@@ -63,4 +62,63 @@ Step 4: Create the CONTRIBUTING.md file
 Step 5: Stage the newly created file
 Step 6: Commit the staged file to the feature branch
 Step 7: Push the new branch and its commit to the remote repository
+
+
+## Branching & Collaboration
+
+Step 1: Create a New Branch Locally(git checkout -b feature-1
+)
+ Step 2: Add a New Feature File(echo "This is a new feature file" > feature1.txt
+git add feature1.txt
+git commit -m "Add feature1.txt")
+Step 3: Push the Branch to GitHub(git push origin feature-1
+){Go to your GitHub repo. We will see
+➡️ "Compare & Pull Request" → Click it → Fill in title & description → Create Pull Request.}
+Step 4: Merge the Pull Request( On the GitHub UI, click Merge pull request.Click Confirm merge.)
+Step 5: Sync Local master or main(git checkout master
+git pull origin master
+)
+
+##  Fixing Mistakes, Stashing Work, and Ignoring Junk
+### Revert a Commit in Git
+Step1: See the commit history(git log --oneline)
+{It will show something like:a1b2c3d Add mistake.txt}
+Step2: Revert the commit(git revert a1b2c3d)
+Step3:git push
+### Stash Changes (temporary save)
+Step1: Stash your work(git stash)
+Step2: Your changes are now hidden! Check status(git status)
+Step3: Bring the changes back(git stash pop)
+### .gitignore creating
+Step1: Create a .log file and ignore it(echo "Ignore me" >test.log)
+Step2: echo "*.log" >> .gitignore
+Step3: git add .gitignore
+Step4: git commit -m "Ignore .log files"
+Step5: git push
+
+## Forks, SSH, and CI/CD
+### Fork & Contribute to Any Public Repo
+Step1: Go to any public repo  → click Fork.
+Step2: Clone your fork(git clone git@github.com:your_username/Hello-World.git
+cd Hello-World)
+Step3: Add upstream to track the original repo(git remote add upstream https://github.com/octocat/Hello-World.git
+git fetch upstream
+git merge upstream/main  # or upstream/master)
+Step4: Create a branch, make changes, push, and open a pull request from your fork → base repo.
+### SSH Set Up for Secure Pushes
+Step1: Generate SSH Key (ssh-keygen -t ed25519 -C "your_email@example.com"){Press Enter through prompts (or add a custom file path).
+Step2: This creates a key pair: ~/.ssh/id_ed25519 and ~/.ssh/id_ed25519.pub.}
+Step3: Add SSH Key to GitHub:(cat ~/.ssh/id_ed25519.pub){Copy the entire key (starts with ssh-ed25519).
+Go to GitHub → Settings → SSH and GPG Keys → New SSH Key.
+Give it a name like laptop-key and paste the key.}
+Step4: Test your connection(ssh -T git@github.com)
+###  Add GitHub Actions (CI/CD)
+Step 1: Create Workflow Directory(mkdir -p .github/workflows)
+Step 2: Create a Workflow File(Create a YAML file inside the folder:touch .github/workflows/ci.yml,Now Open:nano .github/workflows/ci.yml, And paste :Someline and to save and exit ((Ctrl + O, Enter, then Ctrl + X in nano)
+Step 3: Commit and Push the Workflow (git add .github/workflows/ci.yml
+git commit -m "Add basic GitHub Actions workflow"
+git push)
+Step 4: View the Workflow Run{Go to your repo on GitHub,Click the Actions tab,You’ll see your workflow (CI Workflow) running,Click on it to view logs and steps}
+
+
 
