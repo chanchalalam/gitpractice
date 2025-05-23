@@ -40,17 +40,44 @@ This repository contains essential Git commands and workflows for cloning, branc
 
 ## Basic Git Commands
 
-| Command                          | Description                                             |
-|---------------------------------|---------------------------------------------------------|
-| `git clone <repo-url>`           | Get a copy of a remote repository.                      |
-| `git status`                    | See the state of your files (modified, staged, untracked). |
-| `git diff`                     | View exact changes made to files.                        |
-| `git add <file>`                | Stage changes for the next commit.                       |
-| `git commit -m "message"`       | Commit staged changes with a descriptive message.       |
-| `git push origin <branch-name>` | Push your commits to the remote repository.              |
-| `git log`                      | View commit history.                                     |
-| `git checkout <branch>`         | Switch branches.                                         |
-| `touch CONTRIBUTING.md`          | Create a new file (example: CONTRIBUTING.md).            |
+
+| Command                            | Description                                                    |
+|----------------------------------|----------------------------------------------------------------|
+| `git clone <repo-url>`            | Get a copy of a remote repository.                             |
+| `git status`                     | See the state of your files (modified, staged, untracked).    |
+| `git diff`                      | View exact changes made to files.                              |
+| `git add <file>`                 | Stage changes for the next commit.                             |
+| `git commit -m "message"`        | Commit staged changes with a descriptive message.             |
+| `git push origin <branch-name>`  | Push your commits to the remote repository.                    |
+| `git log`                       | View commit history.                                           |
+| `git checkout <branch>`           | Switch branches.                                               |
+| `touch CONTRIBUTING.md`           | Create a new file (example: CONTRIBUTING.md).                  |
+| `git fetch`                     | Download changes from remote without merging.                  |
+| `git pull`                      | Fetch and merge changes from remote to local branch.           |
+| `git reset <file>`              | Unstage a file but keep changes locally.                        |
+| `git reset --hard <commit>`      | Reset working directory and staging area to a specific commit (destructive). |
+| `git rm <file>`                 | Remove a file from working directory and staging area.         |
+| `git stash list`                | List all saved stashes.                                        |
+| `git stash apply`               | Apply a stash without removing it from the stash list.         |
+| `git branch`                   | List all local branches.                                       |
+| `git branch -d <branch>`          | Delete a local branch if merged.                               |
+| `git branch -D <branch>`          | Force delete a local branch even if unmerged.                  |
+| `git remote -v`                 | Show URLs of remotes (fetch and push).                        |
+| `git tag <tagname>`             | Create a tag for marking releases or important commits.        |
+| `git show <commit/tag>`         | Show details of a commit or tag including diff and metadata.   |
+| `git cherry-pick <commit>`       | Apply a commit’s changes to the current branch.               |
+| `git blame <file>`              | Show who last modified each line in a file.                    |
+| `git clean -f`                 | Remove untracked files from the working directory.             |
+| `git diff --staged`                   | Show changes between staged files and last commit.          |
+| `git merge <branch>`                  | Merge a branch into the current branch.                       |
+| `git rebase <branch>`                 | Reapply commits on top of another base branch.               |
+| `git reflog`                         | Show a log of all reference updates (including resets).      |
+| `git remote add <name> <url>`         | Add a new remote repository with a given name.               |
+| `git remote remove <name>`             | Remove a remote repository.                                  |
+| `git tag -a <tag> -m "message"`       | Create an annotated tag with a message.                      |
+| `git push origin --tags`               | Push all tags to remote repository.                          |
+| `git revert --no-commit <commit>`      | Revert changes from a commit without committing immediately. |
+
 
 ---
 
