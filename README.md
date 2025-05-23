@@ -120,5 +120,19 @@ git commit -m "Add basic GitHub Actions workflow"
 git push)
 Step 4: View the Workflow Run{Go to your repo on GitHub,Click the Actions tab,You’ll see your workflow (CI Workflow) running,Click on it to view logs and steps}
 
+## GitHub CLI to manage repos, issues, pull requests, and more
 
+Step 1: Install GitHub CLI(brew install gh)
+Step 2: Authenticate(gh auth login)
+Step 3: Try basic commands(gh repo clone chanchalalam/gitpractice ,cd gitpractice)
+Step4: Create a new issue:gh issue create --title "Test issue from CLI" --body "This is a test created via GitHub CLI"
+Step5: List open PRs:gh pr list
+Step6: Create a new branch & PR{git checkout -b cli-feature
+echo "CLI test" > cli.txt
+git add cli.txt
+git commit -m "Add cli.txt created via gh"
+git push -u origin cli-feature
+gh pr create --fill}
+Step7:Review and merge PR{gh pr review <pr-number> --approve
+gh pr merge <pr-number> --merge}
 
