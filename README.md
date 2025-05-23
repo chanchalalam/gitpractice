@@ -30,5 +30,7 @@ git log: View the commit history .
 ## To tell Git to include these modifications in the next commit
 
 step1: git add README.md
+
 step2: git commit -m "Update README with progress"
+
 step3: git push origin main
