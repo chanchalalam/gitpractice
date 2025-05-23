@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome 🌼</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: #fffafc;
+      color: #444;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff8fb1;
+      margin: 0.5em 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    .typing-text {
+      border-right: 2px solid #ff8fb1;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      max-width: 100%;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ff8fb1;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #e35b8f;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hi there! 🌸</h1>
+  <p class="typing-text">Welcome to my cute GitHub homepage ✨</p>
+
+  <div class="socials" style="margin-top: 1.5em;">
+    <a href="https://github.com/yourusername" target="_blank">🐱 GitHub</a>
+    <a href="https://twitter.com/yourhandle" target="_blank">🐦 Twitter</a>
+    <a href="mailto:you@example.com">📧 Email</a>
+  </div>
+
+  <footer>
+    Made with 💖 by YourName
+  </footer>
+
+</body>
+</html>
