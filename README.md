@@ -34,6 +34,10 @@ git diff: See the exact changes you've made to files.
 
 git log: View the commit history .
 
+git checkout master: Check current branch and its status
+
+touch CONTRIBUTING.md: Create the CONTRIBUTING.md file
+
 
 ## To tell Git to include these modifications in the next commit
 
@@ -42,3 +46,21 @@ step1: git add README.md
 step2: git commit -m "Update README with progress"
 
 step3: git push origin main
+
+## Create a New Branch for a New Task 
+ Contribution Guidelines
+Thank you for considering contributing to this project!
+ How to Contribute
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Submit a Pull Request.
+
+Step 1: Check current branch and its status
+Step 2: Create and switch to a new feature branch
+Step 3: Attempt to add a file that doesn't exist yet
+Step 4: Create the CONTRIBUTING.md file
+Step 5: Stage the newly created file
+Step 6: Commit the staged file to the feature branch
+Step 7: Push the new branch and its commit to the remote repository
+
