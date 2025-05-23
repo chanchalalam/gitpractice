@@ -260,4 +260,3 @@ gh pr merge <pr-number> --merge
 
 ---
 
-Happy Git Practicing! 🚀
