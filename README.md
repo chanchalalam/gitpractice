@@ -44,7 +44,7 @@ step1: git add README.md
 
 step2: git commit -m "Update README with progress"
 
-step3: git push origin main
+step3: git push origin master
 
 ## Create a New Branch for a New Task 
  Contribution Guidelines
