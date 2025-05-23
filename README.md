@@ -38,7 +38,7 @@ This repository contains essential Git commands and workflows for cloning, branc
 
 ---
 
-## Basic Git Commands
+## Git Commands
 
 
 | Command                            | Description                                                    |
